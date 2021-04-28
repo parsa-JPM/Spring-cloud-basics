@@ -38,7 +38,7 @@ public class SayHelloToUsersController {
         logger.info("traceId is " + tracer.currentSpan().context().traceIdString());
 
         String lang = users.getOrDefault(user, "en");
-        String result = restTemplate.getForObject("http://localhost:8080/" + lang, String.class);
+        String result = restTemplate.getForObject("http://greeting/" + lang, String.class);
 
         return result + " " + user;
     }
