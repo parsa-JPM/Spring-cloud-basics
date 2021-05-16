@@ -27,9 +27,9 @@ public class SayHelloToUsersController {
     private Map<String, String> users = new HashMap<>();
 
     {
-        users.put("Ali", "fa");
-        users.put("Chris", "en");
-        users.put("Kloze", "de");
+        users.put("ali", "fa");
+        users.put("chris", "en");
+        users.put("kloze", "de");
     }
 
     @GetMapping("/hello/{user}")

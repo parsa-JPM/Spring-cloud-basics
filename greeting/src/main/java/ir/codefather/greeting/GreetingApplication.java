@@ -26,7 +26,8 @@ public class GreetingApplication {
 
 	@GetMapping("/{lang}")
 	public String sayGreeting(@PathVariable String lang) {
-		logger.info("we've generated greeting with lang " + lang);
+		String msg = "we've generated greeting with lang " + lang;
+		logger.info(msg);
 
 		return greetingProperties.getGreetings().getOrDefault(lang, greetingProperties.getGreeting());
 	}
